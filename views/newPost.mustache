@@ -1,0 +1,51 @@
+<html>
+   <head>
+      <title>Fullfill</title>
+      <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="../css/style.css">
+   </head>
+
+   <body class="parent_body">
+      <nav class="navigation">
+         <img class="logo_1 nav-brand" src="../img/Screen%20Shot%202018-01-16%20at%206.50.26%20PM.png">
+         <ul class="nav justify-content-end nav-items">
+            <li class="nav-item">
+               <a class="nav-link active" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/topics/all">Materials</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/settings">Settings</a>
+            </li>
+         </ul>
+      </nav>
+      <div class="create-post">
+        <form method="POST" action="/newpost">
+          <input type="text" name="title"></input>
+          <input type="text" name="subheader"></input>
+          <select class="form-control" name="sub_menu" id="sub_menu">
+            {{#alltags}}
+               <option name="{{{id}}}">{{name}}</option>
+            {{/alltags}}
+          </select>
+          <button type="submit" name="submit">Post New Habit</button>
+        </form>
+      </div>
+        <div class="post-nav">
+          <div class="tree">
+            <div class="alltags">All Tags</div>
+            <div class="usertags"></div>
+        </div>
+      </div>
+    </div>
+      <footer class="container-fluid bottom_footer">
+         <p>built by Nydia and Danny &#169;2018</p>
+      </footer>
+   </body>
+</html>
